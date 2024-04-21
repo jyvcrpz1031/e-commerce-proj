@@ -8,7 +8,7 @@ import {
 // import { useEffect } from "react";
 // import { getRedirectResult } from "firebase/auth";
 import FormInput from "../FormInput";
-import Button from "../Button";
+import Button, { BUTTON_TYPE_CLASSES } from "../Button";
 import "./index.scss";
 
 const defaultFormFields = {
@@ -73,7 +73,7 @@ const SignInForm = () => {
         />
         <div className="buttons-container">
           <Button type="submit">Sign In</Button>
-          <Button type="button" buttonType="google" onClick={logGoogleUser}>
+          <Button type="button" buttonType={BUTTON_TYPE_CLASSES.google} onClick={logGoogleUser}>
             Google Sign In
           </Button>
         </div>
